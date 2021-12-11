@@ -1,6 +1,6 @@
-package ru.dmitry.kuzmenchuk.newstackapp.domain
+package ru.dmitry.kuzmenchuk.newstackapp.domain.interactor
 
-import ru.dmitry.kuzmenchuk.newstackapp.data.UnsplashRepository
+import ru.dmitry.kuzmenchuk.newstackapp.data.data_source.UnsplashRepository
 import ru.dmitry.kuzmenchuk.newstackapp.domain.entity.Photo
 
 class UnsplashInteractor(private val repository: UnsplashRepository) {

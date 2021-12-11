@@ -10,9 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import ru.dmitry.kuzmenchuk.newstackapp.data.UnsplashRepository
+import ru.dmitry.kuzmenchuk.newstackapp.data.data_source.UnsplashRepository
 import ru.dmitry.kuzmenchuk.newstackapp.data.retrofit.UnsplashRequestInterceptor
-import ru.dmitry.kuzmenchuk.newstackapp.domain.UnsplashInteractor
+import ru.dmitry.kuzmenchuk.newstackapp.domain.interactor.UnsplashInteractor
 import ru.dmitry.kuzmenchuk.newstackapp.ui.theme.MyApplicationTheme
 
 class MainActivity : ComponentActivity() {

@@ -1,4 +1,4 @@
-package ru.dmitry.kuzmenchuk.newstackapp.data
+package ru.dmitry.kuzmenchuk.newstackapp.data.data_source
 
 import retrofit2.Retrofit
 import ru.dmitry.kuzmenchuk.newstackapp.data.util.TransformableMapping.Extensions.transform

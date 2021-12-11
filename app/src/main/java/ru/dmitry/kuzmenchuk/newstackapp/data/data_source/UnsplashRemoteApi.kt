@@ -1,4 +1,4 @@
-package ru.dmitry.kuzmenchuk.newstackapp.data
+package ru.dmitry.kuzmenchuk.newstackapp.data.data_source
 
 import retrofit2.http.GET
 import retrofit2.http.Query
