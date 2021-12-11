@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SurfAndroidStandard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bethowen-android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dxmoband" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gkg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gkgmoband" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/gkgmoband2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/helzy-android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/new-stack-sample-app" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tricolor-android" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ustxgand" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ustxgand-2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ustxgmgw" vcs="Git" />
+  </component>
+</project>
