@@ -2,22 +2,20 @@ package ru.dmitry.kuzmenchuk.newstackapp.ui.main
 
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.asSharedFlow
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.*
 import ru.dmitry.kuzmenchuk.newstackapp.domain.entity.Photo
 import ru.dmitry.kuzmenchuk.newstackapp.domain.interactor.UnsplashInteractor
 import ru.dmitry.kuzmenchuk.newstackapp.domain.util.loadable.LoadableScope
 
 class MainViewModel(private val interactor: UnsplashInteractor) : ViewModel(), LoadableScope {
 
-    val stateFlow: Flow<MainState> get() = stateHolder.asSharedFlow()
+    val stateFlow: StateFlow<MainState> get() = stateHolder.asStateFlow()
 
     private val stateHolder: MainStateHolder = MainStateHolder()
     private val mainHandler: Handler = Handler(Looper.getMainLooper())
@@ -27,6 +25,7 @@ class MainViewModel(private val interactor: UnsplashInteractor) : ViewModel(), L
     }
 
     private fun handleEvent(event: MainEvent) {
+        Log.d("TEST", "event = $event")
         updateState(event)
         handleLogic(event)
     }
@@ -42,10 +41,20 @@ class MainViewModel(private val interactor: UnsplashInteractor) : ViewModel(), L
             else -> oldState
         }
         stateHolder.value = newState
+        Log.d("TEST", "old = $oldState, new = $newState")
     }
 
     private fun handleLogic(event: MainEvent) {
-
+        when (event) {
+            MainEvent.EditorialPhotosRequested -> loadEditorialPhotos()
+            is MainEvent.PhotoClicked -> TODO()
+            is MainEvent.RandomPhotoRequest -> TODO()
+            MainEvent.RandomPhotoRequested -> TODO()
+            is MainEvent.SearchPhotosRequest -> TODO()
+            MainEvent.SearchPhotosRequested -> TODO()
+            is MainEvent.SearchQueryChanged -> TODO()
+            is MainEvent.TabChanged -> TODO()
+        }
     }
 
     private var loadEditorialPhotosJob: Job? = null
